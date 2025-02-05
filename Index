@@ -1,0 +1,91 @@
+Jasné! Tu je aktualizovaný kód s modernejším štýlom pomocou CSS. Pridal som niekoľko moderných dizajnových prvkov, ako sú zaoblené rohy, tiene a prechodové efekty.
+
+HTML (index.html)
+
+
+    Jednoduché fórum
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        #postForm {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        textarea {
+            width: 100%;
+            max-width: 600px;
+            padding: 10px;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            resize: none;
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+        button {
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            padding: 10px 20px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        #posts {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .post {
+            background-color: white;
+            border-radius: 8px;
+            padding: 15px;
+            margin-bottom: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s;
+        }
+        .post:hover {
+            transform: scale(1.02);
+        }
+
+
+    Jednoduché fórum
+
+        Odoslať
+
+        document.getElementById('postForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const content = document.getElementById('postContent').value;
+            if (content) {
+                const postDiv = document.createElement('div');
+                postDiv.className = 'post';
+                postDiv.textContent = content;
+                document.getElementById('posts').prepend(postDiv);
+                document.getElementById('postContent').value = '';
+            }
+        });
+
+
+
+Zmeny v štýle:
+
+Font: Použitý moderný font 'Roboto' z Google Fonts.
+Pozadie: Svetlo šedé pozadie pre lepší kontrast.
+Formulár: Zaoblené rohy a tieň pre textovú oblasť a tlačidlo.
+Tlačidlo: Modré pozadie s prechodom a efektom pri prechode myšou.
+Príspevky: Každý príspevok má biele pozadie, zaoblené rohy a tieň, s efektom zväčšenia pri prechode myšou.
+
+Tento nový štýl by mal poskytnúť moderný a atraktívny vzhľad tvojmu fóru! Ak máš ďalšie požiadavky alebo nápady na úpravy, pokojne mi daj vedieť!
